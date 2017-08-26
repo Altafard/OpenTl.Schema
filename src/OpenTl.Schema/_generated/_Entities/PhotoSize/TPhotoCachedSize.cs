@@ -13,13 +13,13 @@ namespace OpenTl.Schema
 	public class TPhotoCachedSize : IPhotoSize
 	{
        [SerializationOrder(0)]
-       public byte[] YpeAsBinary { get => _YpeAsBinary; set { _Ype = Encoding.UTF8.GetString(value); _YpeAsBinary = value; }}
-       private byte[] _YpeAsBinary;
-       private string _Ype;
-       public string Ype { get => _Ype; set { YpeAsBinary = Encoding.UTF8.GetBytes(value); _Ype = value; }}
+       public byte[] TypeAsBinary { get => _TypeAsBinary; set { _Type = Encoding.UTF8.GetString(value); _TypeAsBinary = value; }}
+       private byte[] _TypeAsBinary;
+       private string _Type;
+       public string Type { get => _Type; set { TypeAsBinary = Encoding.UTF8.GetBytes(value); _Type = value; }}
 
        [SerializationOrder(1)]
-       public IFileLocation Location {get; set;}
+       public OpenTl.Schema.IFileLocation Location {get; set;}
 
        [SerializationOrder(2)]
        public int W {get; set;}
